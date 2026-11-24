@@ -1,0 +1,6 @@
+{
+  "name": "RushPass — Crowd-Aware Digital Bus Ticketing",
+  "description": "Crowd-aware digital bus ticketing and live occupancy management system with interconnected passenger and conductor interfaces.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": []
+}

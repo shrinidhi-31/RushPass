@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --color-ivory: #fdf9f0;
+  --color-canvas: #F5F1E8;
+  --color-surface-low: #f7f3ea;
+  --color-surface-container: #f1eee5;
+  --color-surface-high: #ece8df;
+  --color-border-tactile: #E5DFD3;
+  --color-teal: #278B78;
+  --color-teal-deep: #006858;
+  --color-teal-hover: #1E7060;
+  --color-navy: #183B50;
+  --color-slate-body: #4B6272;
+  --color-slate-muted: #7D909E;
+  --color-coral: #C95750;
+  --color-coral-deep: #a03934;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #F5F1E8;
+    color: #183B50;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #F5F1E8;
+    color: #183B50;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tactile Card Elevation */
+.tactile-card {
+  background-color: #ffffff;
+  border: 1px solid #E5DFD3;
+  border-radius: 16px;
+  box-shadow: 0 2px 4px rgba(24, 59, 80, 0.04);
+}
+
+.tactile-ticket {
+  background-color: #ffffff;
+  border: 1px solid #E5DFD3;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px -2px rgba(24, 59, 80, 0.08);
+}
+
+/* Ticket perforated divider */
+.ticket-perforation {
+  position: relative;
+  border-top: 2px dashed #E5DFD3;
+}
+
+.ticket-perforation::before,
+.ticket-perforation::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  width: 22px;
+  height: 22px;
+  background-color: #F5F1E8;
+  border: 1px solid #E5DFD3;
+  border-radius: 9999px;
+}
+
+.ticket-perforation::before {
+  left: -12px;
+}
+
+.ticket-perforation::after {
+  right: -12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ping,
+  .animate-pulse {
+    animation: none !important;
+  }
+}
